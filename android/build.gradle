@@ -15,7 +15,7 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
-         flatDir {
+        flatDir {
             dirs project(':esewa_pnp').file('libs')
         }
     }
@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation (name: 'eSewaSdk', ext: 'aar')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation "com.android.support:cardview-v7:27.1.1"
     implementation "com.android.support:design:27.1.1"
