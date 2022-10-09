@@ -15,6 +15,9 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+         flatDir {
+            dirs project(':esewa_pnp').file('libs')
+        }
     }
 }
 apply plugin: 'com.android.library'
