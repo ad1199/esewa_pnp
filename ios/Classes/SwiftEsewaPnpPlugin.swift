@@ -41,7 +41,7 @@ public class SwiftEsewaPnpPlugin: NSObject, FlutterPlugin, EsewaSDKPaymentDelega
         let callBackURL = payment.value(forKey: "callBackURL") as! String
         
         sdk = EsewaSDK(inViewController: controller, environment: env, delegate: self)
-        sdk?.initiatePayment(merchantId: clientID, merchantSecret: secretKey, productName: productName, productAmount: amount, productId: productID, callbackUrl: callBackURL)
+        sdk?.initiatePayment(merchantId: clientID, merchantSecret: secretKey, productName: productName, productAmount: amount, productId: productID, callbackUrl: callBackURL, paymentProperties: nil)
     }
     
     public func onEsewaSDKPaymentSuccess(info: [String : Any]) {
